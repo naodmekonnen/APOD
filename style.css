@@ -1,0 +1,59 @@
+body{
+    margin:10px;
+    padding:1rem, 1rem 1rem 1rem;
+  }
+  
+  header{
+    padding:1rem;
+    text-align:center;
+    background: black;
+    color: white;
+    font-size: 15px;
+  }
+  
+  label{
+  /*   box-sizing: border-box; */
+    padding: 2rem;
+    border-radius: 0.4rem;
+    background-color:white;
+    border: 4px solid white; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem; 
+  }
+  
+  #chosenDate{
+   width: 75vw;
+   padding: 00.2rem;
+   display:block;
+  }
+  
+  #title{
+    text-align: center;
+    padding:1rem;
+  }
+  
+  #description{
+    width: 80%;
+    margin:0.1rem auto 1rem;
+    border: solid 1px white;
+    padding: 0.5rem;
+    border-radius: 00.5rem;
+  }
+  
+  #copyright{
+    align-content:center;
+    background: black;
+    color: white;
+    font-size: 10px;
+    position:absolute;
+  }
+  
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height:auto;
+  }
+  
