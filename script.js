@@ -1,14 +1,41 @@
-let displayimg = document.querySelector("#search")
-console.log(displayimg)
-displayimg.addEventListener('click',()=>{
-  // get value from the date picker
-  let date = document.getElementById('chosenDate').value
-      // value
+// let displayimg = document.querySelector("#search")
+// console.log(displayimg)
+// displayimg.addEventListener('click',()=>{
+//   // get value from the date picker
+//   let date = document.getElementById('chosenDate').value
+//       // value
   
-  console.log("clicked")
+//   console.log("clicked")
   
-  fetchAPIdata(date)                             
-}) 
+//   fetchAPIdata(date)                             
+// }) 
+
+
+
+
+// // // fetchAPIdata()
+// // "${data.hdurl}
+
+let displayimg = document.querySelector("#search");
+console.log(displayimg);
+
+// Get the current date
+let currentDate = new Date().toISOString().split("T")[0];
+
+displayimg.addEventListener("click", () => {
+  // Get value from the date picker
+  let date = document.getElementById("chosenDate").value;
+
+  // Check if selected date is in the future
+  if (date > currentDate) {
+    alert("Please select a date in the past or today.");
+    return;
+  }
+
+  console.log("clicked");
+
+  fetchAPIdata(date);
+});
 
 
 const title = document.querySelector("#title")
@@ -37,15 +64,3 @@ function displayAPIdata(data){
 // console.log(photo.innerHTML)
    } 
      })}
-
-// function displayAPIdata(data){
-//    title.innerHTML=data.date;
-//    title.innerHTML+=data.title;
-//    description.innerHTML+=data.explanation;
-//    photo.innerHTML += `<img src="${data.hdurl}">
- 
-
-//    } 
-
-// // fetchAPIdata()
-// "${data.hdurl}
